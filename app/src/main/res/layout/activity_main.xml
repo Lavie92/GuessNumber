@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="ĐOÁN SỐ"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnFinish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="116dp"
+        android:text="Finish"
+        android:enabled="false"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/txtNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="50dp"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Nhập số cần đoán"
+        android:inputType="numberDecimal"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/guessThTime"
+        app:layout_constraintTop_toBottomOf="@+id/btnNew" />
+
+    <TextView
+        android:id="@+id/guessThTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Lần đoán"
+        app:layout_constraintBaseline_toBaselineOf="@+id/numberTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="38dp"
+        android:enabled="false"
+        android:text="Guess"
+        app:layout_constraintEnd_toEndOf="@+id/txtHistory"
+        app:layout_constraintHorizontal_bias="0.305"
+        app:layout_constraintStart_toEndOf="@+id/btnNew"
+        app:layout_constraintTop_toBottomOf="@+id/txtNumber" />
+
+    <Button
+        android:id="@+id/btnNew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="4dp"
+        android:text="New"
+        app:layout_constraintEnd_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/lblResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="69dp"
+        android:text="Kết quả"
+        app:layout_constraintBottom_toTopOf="@+id/lblHistory"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lblHistory"
+        android:layout_width="78dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:text="Nhật ký"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtHistory"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/numberTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="12dp"
+        android:text=""
+        app:layout_constraintStart_toEndOf="@+id/guessThTime"
+        app:layout_constraintTop_toTopOf="@+id/txtNumber" />
+
+    <TextView
+        android:id="@+id/txtHistory"
+        android:layout_width="157dp"
+        android:layout_height="189dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginBottom="68dp"
+        android:text="Lịch sử"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="1dp"
+        android:text="TextView"
+        app:layout_constraintStart_toEndOf="@+id/lblResult"
+        app:layout_constraintTop_toTopOf="@+id/lblResult" />
+
+    <TextView
+        android:id="@+id/lblGameOver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginTop="98dp"
+        android:layout_marginBottom="99dp"
+        android:text="Vui lòng đoán số!"
+        app:layout_constraintBottom_toBottomOf="@+id/btnFinish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
